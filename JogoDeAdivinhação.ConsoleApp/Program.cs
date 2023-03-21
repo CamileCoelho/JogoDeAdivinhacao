@@ -48,6 +48,7 @@ namespace JogoDeAdivinhação.ConsoleApp
                 Console.WriteLine("____________________________________________________________________");
                 Console.WriteLine();
                 Console.WriteLine("      O jogo consiste em adivinhar um número aleatório entre 1 e 20. ");
+                Console.WriteLine("____________________________________________________________________");
                 Console.WriteLine();
 
                 for ( int i = 1; i <= numeroChutes; i++)
