@@ -61,11 +61,11 @@ namespace JogoDeAdivinhação.ConsoleApp
                     string chute = Console.ReadLine();
                     int numeroChute = Convert.ToInt32(chute);
 
-                    if (numeroChute < 0)
+                    if (numeroChute <= 0)
                     {
                         Console.WriteLine();
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("      Você não pode chutar números negativos. Tente novamente.");
+                        Console.WriteLine("      Você não pode chutar zero ou números negativos. Tente novamente.");
                         i--;
                         continue;
                     }
@@ -81,10 +81,14 @@ namespace JogoDeAdivinhação.ConsoleApp
                     if (acertou)
                     {
                         Console.WriteLine();
+                        Console.WriteLine("____________________________________________________________________");
+                        Console.WriteLine();
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine("      Parabéns, você acertou! ");
                         Console.WriteLine();
                         Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("      O número secreto era " + numeroSecreto);
+                        Console.WriteLine();
                         Console.WriteLine("      Sua pontuação foi de " + suaPontuacao);
                         break;
                     }
@@ -112,18 +116,18 @@ namespace JogoDeAdivinhação.ConsoleApp
                     }
                     if (perdeu)
                     {
+                        Console.WriteLine("____________________________________________________________________");
                         Console.WriteLine();
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("      Você perdeu :( ");
                         Console.WriteLine();
                         Console.ForegroundColor = ConsoleColor.Magenta;
-                        Console.WriteLine("      O número secreto era: " + numeroSecreto);
+                        Console.WriteLine("      O número secreto era " + numeroSecreto);
                         Console.WriteLine();
+                        Console.WriteLine("      Sua pontuação foi de " + suaPontuacao);
                         Console.WriteLine("____________________________________________________________________");
                         Console.WriteLine();
                         Console.WriteLine("      Mas não desanime, jogue novamente!");
-                        Console.WriteLine();
-                        Console.WriteLine("      Sua pontuação foi de " + suaPontuacao);
                         break;
                     }
                 }
@@ -133,6 +137,7 @@ namespace JogoDeAdivinhação.ConsoleApp
                 Console.WriteLine("____________________________________________________________________");
                 Console.WriteLine();
                 Console.WriteLine("      Obrigada por jogar :) ");
+                Console.WriteLine("____________________________________________________________________");
                 Console.WriteLine();
                 Console.WriteLine("      Você deseja sair ou jogar outra vez? Digite \"SAIR\" \n      caso queira parar, ou qualquer tecla para continuar. ");
                 Console.WriteLine();
