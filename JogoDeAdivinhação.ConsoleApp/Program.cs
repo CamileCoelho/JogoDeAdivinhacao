@@ -7,19 +7,18 @@ namespace JogoDeAdivinhação.ConsoleApp
         static void Main(string[] args)
         {
             int nivelDificuldade, numeroChutes, suaPontuacao = 1000;
-            // Random random = new Random();
-            // numeroSecreto = random.Next(1, 21);
-            int numeroSecreto = 15;
+            Random random = new Random();
+            int numeroSecreto = random.Next(1, 21);
             string saida = "";
             do
             {
                 Console.Clear();
 
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("__________________________________________________________________");
+                Console.WriteLine("____________________________________________________________________");
                 Console.WriteLine();
                 Console.WriteLine("      Seja muito bem vindo ao jogo de adivinhação da Camile!");
-                Console.WriteLine("__________________________________________________________________");
+                Console.WriteLine("____________________________________________________________________");
                 Console.WriteLine();
                 Console.WriteLine("      Escolha o nível de dificuldade do seu jogo:");
                 Console.WriteLine();
@@ -46,7 +45,7 @@ namespace JogoDeAdivinhação.ConsoleApp
                 else
                     numeroChutes = 5;
 
-                Console.WriteLine("__________________________________________________________________");
+                Console.WriteLine("____________________________________________________________________");
                 Console.WriteLine();
                 Console.WriteLine("      O jogo consiste em adivinhar um número aleatório entre 1 e 20. ");
                 Console.WriteLine();
@@ -119,7 +118,7 @@ namespace JogoDeAdivinhação.ConsoleApp
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("      O número secreto era: " + numeroSecreto);
                         Console.WriteLine();
-                        Console.WriteLine("__________________________________________________________________");
+                        Console.WriteLine("____________________________________________________________________");
                         Console.WriteLine();
                         Console.WriteLine("      Mas não desanime, jogue novamente!");
                         Console.WriteLine();
@@ -130,14 +129,15 @@ namespace JogoDeAdivinhação.ConsoleApp
 
 
                 Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("____________________________________________________________________");
                 Console.WriteLine();
                 Console.WriteLine("      Obrigada por jogar :) ");
                 Console.WriteLine();
-                Console.WriteLine("      Você deseja sair ou jogar outra vez? Digite \"SAIR\" caso queiras parar, ou qualquer tecla para continuar. ");
+                Console.WriteLine("      Você deseja sair ou jogar outra vez? Digite \"SAIR\" \n      caso queira parar, ou qualquer tecla para continuar. ");
                 Console.WriteLine();
                 Console.Write("      ");
                 saida = Console.ReadLine().ToUpper();
-                Console.WriteLine("__________________________________________________________________");
+                Console.WriteLine("____________________________________________________________________");
                 Console.WriteLine();
 
             } while (saida != "SAIR");
