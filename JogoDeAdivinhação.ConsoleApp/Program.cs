@@ -143,7 +143,8 @@ namespace JogoDeAdivinhação.ConsoleApp
         { 
             do
             {
-                random = new Random();
+                Random random = new Random();
+                int numeroSecreto = random.Next(1, 21);
 
                 Console.Clear();
 
